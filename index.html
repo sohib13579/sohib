@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0f1a">
+    <title>متجر علوش</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Changa:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <!-- Animated Background Canvas -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <header class="hero">
+      <div class="container">
+        <h1 class="site-title proximity" data-proximity-radius="240">
+          متجر علوش
+        </h1>
+        <p class="subtitle proximity" data-proximity-radius="200">
+          لدينا أفخم الحسابات لجميع الألعاب
+        </p>
+        <p class="subtitle proximity" data-proximity-radius="200">
+          وشحن جميع الألعاب بمعنى الكلمة وبأرخص الأسعار
+        </p>
+        <div class="cta-row">
+          <a class="btn primary proximity" data-proximity-radius="180" href="https://wa.me/201012864994" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery section">
+        <div class="container">
+          <h2 class="section-title proximity" data-proximity-radius="220">معروضات الألعاب</h2>
+          <div class="cards-grid">
+            <article class="card game-card proximity" data-proximity-radius="180">
+              <div class="image-wrap">
+                <img src="./assets/images/pes.jpg" alt="حسابات لعبة بيس" loading="lazy">
+                <span class="tag">بيس</span>
+              </div>
+            </article>
+            <article class="card game-card proximity" data-proximity-radius="180">
+              <div class="image-wrap">
+                <img src="./assets/images/pubg.jpg" alt="حسابات لعبة ببجي" loading="lazy">
+                <span class="tag">ببجي</span>
+              </div>
+            </article>
+            <article class="card game-card proximity" data-proximity-radius="180">
+              <div class="image-wrap">
+                <img src="./assets/images/freefire.jpg" alt="حسابات لعبة فري فاير" loading="lazy">
+                <span class="tag">فري فاير</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="whatsapp section">
+        <div class="container">
+          <h2 class="section-title proximity" data-proximity-radius="220">الفروع وروابط الواتساب</h2>
+
+          <div class="links-group">
+            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/DyoLXmvt3wGIlfeWZVlmE2" target="_blank" rel="noopener">لينك فرع 1</a>
+            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/HLSJpcokvxzINwgEdhoHvn" target="_blank" rel="noopener">لينك فرع 2</a>
+            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/LnRpbVu4u074VXb89ZHrOR" target="_blank" rel="noopener">لينك فرع 3</a>
+            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/HrNsrDJppmrDleC6e7wf7I" target="_blank" rel="noopener">لينك فرع 4</a>
+          </div>
+
+          <h3 class="subheading">أرقام التواصل عبر واتساب</h3>
+          <div class="links-group phones">
+            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201012864994" target="_blank" rel="noopener">01012864994</a>
+            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201010192901" target="_blank" rel="noopener">01010192901</a>
+            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201228690021" target="_blank" rel="noopener">01228690021</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> متجر علوش — جمال، سرعة، وثقة</p>
+      </div>
+    </footer>
+
+    <script defer src="./script.js"></script>
+  </body>
+  </html>
+
