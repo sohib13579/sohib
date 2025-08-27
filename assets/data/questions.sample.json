@@ -1,0 +1,13 @@
+[
+  { "q":"أي طبقة مسؤولة عن التوجيه؟", "choices":["التطبيق","النقل","الشبكة","الربط"], "answer":2, "explain":"طبقة الشبكة" },
+  { "q":"منفذ HTTPS الافتراضي؟", "choices":["80","22","443","53"], "answer":2, "explain":"443" },
+  { "q":"بروتوكول يتيح العناوين ديناميكياً؟", "choices":["DNS","DHCP","ARP","ICMP"], "answer":1, "explain":"DHCP" },
+  { "q":"الطبقة التي تتعامل مع MAC؟", "choices":["الشبكة","الربط","التطبيق","المادية"], "answer":1, "explain":"Data Link" },
+  { "q":"ICMP يستخدم عادة لأوامر؟", "choices":["Ping/Traceroute","FTP","SSH","SMTP"], "answer":0, "explain":"Echo/Time Exceeded" },
+  { "q":"RIP يستخدم أي مقياس؟", "choices":["Bandwidth","Delay","Hop Count","Cost"], "answer":2, "explain":"Hop Count" },
+  { "q":"OSPF نوعه؟", "choices":["Distance Vector","Link State","Hybrid","Static"], "answer":1, "explain":"LS" },
+  { "q":"عنوان خاص؟", "choices":["8.8.8.8","172.16.5.1","1.1.1.1","23.23.23.23"], "answer":1, "explain":"172.16.0.0/12" },
+  { "q":"طبقة التشفير TLS؟", "choices":["تطبيق","نقل","شبكة","ربط"], "answer":0, "explain":"يُعتبر ضمن التطبيق" },
+  { "q":"أداة محاكاة شهيرة؟", "choices":["GNS3","Photoshop","Blender","Figma"], "answer":0, "explain":"GNS3/Packet Tracer" }
+]
+
