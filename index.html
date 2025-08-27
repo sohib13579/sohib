@@ -1,91 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b0f1a">
-    <title>متجر علوش</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Changa:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة CCNA التفاعلية</title>
+    <meta name="description" content="منصة تعليمية عربية تفاعلية لمذاكرة CCNA مع ألعاب، اختبارات، ملاحظات، تقدم، وشهادة." />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
-    <!-- Animated Background Canvas -->
-    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div id="tsparticles"></div>
 
-    <header class="hero">
-      <div class="container">
-        <h1 class="site-title proximity" data-proximity-radius="240">
-          متجر علوش
-        </h1>
-        <p class="subtitle proximity" data-proximity-radius="200">
-          لدينا أفخم الحسابات لجميع الألعاب
-        </p>
-        <p class="subtitle proximity" data-proximity-radius="200">
-          وشحن جميع الألعاب بمعنى الكلمة وبأرخص الأسعار
-        </p>
-        <div class="cta-row">
-          <a class="btn primary proximity" data-proximity-radius="180" href="https://wa.me/201012864994" target="_blank" rel="noopener">تواصل عبر واتساب</a>
-        </div>
+    <header class="app-header glass">
+      <div class="brand">
+        <i class="ri-wifi-line"></i>
+        <span>منصة CCNA</span>
       </div>
+      <nav class="nav">
+        <button class="nav-btn" data-target="dashboard"><i class="ri-dashboard-3-line"></i> لوحة التحكم</button>
+        <button class="nav-btn" data-target="lessons"><i class="ri-book-3-line"></i> الدروس</button>
+        <button class="nav-btn" data-target="quick"><i class="ri-flashlight-line"></i> مراجعة سريعة</button>
+        <button class="nav-btn" data-target="lab"><i class="ri-router-line"></i> معمل تفاعلي</button>
+        <button class="nav-btn" data-target="games"><i class="ri-gamepad-line"></i> ألعاب</button>
+        <button class="nav-btn" data-target="videos"><i class="ri-movie-line"></i> فيديوهات</button>
+        <button class="nav-btn" data-target="bank"><i class="ri-question-answer-line"></i> بنك الأسئلة</button>
+        <button class="nav-btn" data-target="scenarios"><i class="ri-road-map-line"></i> سيناريوهات</button>
+        <button class="nav-btn" data-target="flashcards"><i class="ri-stack-line"></i> بطاقات</button>
+        <button class="nav-btn" data-target="notes"><i class="ri-sticky-note-line"></i> ملاحظات</button>
+        <button class="nav-btn" data-target="mindmap"><i class="ri-mind-map"></i> خريطة ذهنية</button>
+        <button class="nav-btn" data-target="exams"><i class="ri-award-line"></i> الامتحانات</button>
+        <button class="nav-btn" data-target="glossary"><i class="ri-bookmark-2-line"></i> قاموس</button>
+        <button class="nav-btn" data-target="resources"><i class="ri-link-m"></i> مصادر</button>
+        <button class="nav-btn" data-target="leaderboard"><i class="ri-bar-chart-2-line"></i> ترتيب</button>
+        <button class="nav-btn" data-target="certificate"><i class="ri-medal-line"></i> الشهادة</button>
+      </nav>
     </header>
 
-    <main>
-      <section class="gallery section">
-        <div class="container">
-          <h2 class="section-title proximity" data-proximity-radius="220">معروضات الألعاب</h2>
-          <div class="cards-grid">
-            <article class="card game-card proximity" data-proximity-radius="180">
-              <div class="image-wrap">
-                <img src="./assets/images/pes.jpg" alt="حسابات لعبة بيس" loading="lazy">
-                <span class="tag">بيس</span>
-              </div>
-            </article>
-            <article class="card game-card proximity" data-proximity-radius="180">
-              <div class="image-wrap">
-                <img src="./assets/images/pubg.jpg" alt="حسابات لعبة ببجي" loading="lazy">
-                <span class="tag">ببجي</span>
-              </div>
-            </article>
-            <article class="card game-card proximity" data-proximity-radius="180">
-              <div class="image-wrap">
-                <img src="./assets/images/freefire.jpg" alt="حسابات لعبة فري فاير" loading="lazy">
-                <span class="tag">فري فاير</span>
-              </div>
-            </article>
+    <main class="app-main">
+      <section class="hero glass">
+        <h1 class="hero-title">
+          <span class="welcome">مرحباً بكم</span>
+          <span class="subtitle">في منصة CCNA التفاعلية بإلهام من كورس م. أحمد نظمي</span>
+        </h1>
+        <p class="hero-text">تعلم، العب، راجع بسرعة، واحصل على شهادتك — كل ذلك بالعربية.</p>
+        <div class="hero-actions">
+          <button class="cta" data-target="lessons">ابدأ التعلم</button>
+          <button class="cta ghost" data-target="dashboard">اعرض تقدمك</button>
+        </div>
+      </section>
+
+      <section id="dashboard" class="view glass hidden">
+        <h2>لوحة التحكم</h2>
+        <div class="dashboard-grid">
+          <div class="card">
+            <h3>التقدم العام</h3>
+            <div class="progress">
+              <div class="progress-bar" id="overall-progress" style="width:0%"></div>
+            </div>
+            <div class="stats-row">
+              <div>الدروس المنتهية: <span id="lessons-done">0</span></div>
+              <div>XP: <span id="xp-points">0</span></div>
+              <div>المستوى: <span id="level-label">Beginner</span></div>
+            </div>
+            <div class="badges" id="badges"></div>
+          </div>
+          <div class="card">
+            <h3>أحدث إنجازاتك</h3>
+            <ul id="recent-activity" class="activity"></ul>
           </div>
         </div>
       </section>
 
-      <section class="whatsapp section">
-        <div class="container">
-          <h2 class="section-title proximity" data-proximity-radius="220">الفروع وروابط الواتساب</h2>
+      <section id="lessons" class="view glass hidden">
+        <h2>الدروس</h2>
+        <div id="lessons-list" class="list"></div>
+        <div id="lesson-detail" class="lesson-detail"></div>
+      </section>
 
-          <div class="links-group">
-            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/DyoLXmvt3wGIlfeWZVlmE2" target="_blank" rel="noopener">لينك فرع 1</a>
-            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/HLSJpcokvxzINwgEdhoHvn" target="_blank" rel="noopener">لينك فرع 2</a>
-            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/LnRpbVu4u074VXb89ZHrOR" target="_blank" rel="noopener">لينك فرع 3</a>
-            <a class="btn glass proximity" data-proximity-radius="160" href="https://chat.whatsapp.com/HrNsrDJppmrDleC6e7wf7I" target="_blank" rel="noopener">لينك فرع 4</a>
+      <section id="quick" class="view glass hidden">
+        <h2>مراجعة سريعة</h2>
+        <div id="quick-carousel" class="carousel"></div>
+      </section>
+
+      <section id="lab" class="view glass hidden">
+        <h2>معمل تفاعلي: صور أجهزة حقيقية</h2>
+        <div class="lab-container">
+          <div class="lab-image">
+            <img src="https://images.unsplash.com/photo-1585392130022-6ec38f7dda89?q=80&w=1800&auto=format&fit=crop" alt="Rack" />
+            <button class="hotspot" style="top: 30%; left: 25%" data-specs='{"name":"Router ISR","ports":"GigabitEthernet 0/0/0-0/0/3","role":"Routing & WAN"}'>R</button>
+            <button class="hotspot" style="top: 55%; left: 60%" data-specs='{"name":"Switch Catalyst","ports":"24x GE, 4x SFP","role":"Access/Distribution"}'>S</button>
           </div>
+          <div id="device-panel" class="device-panel"></div>
+        </div>
+      </section>
 
-          <h3 class="subheading">أرقام التواصل عبر واتساب</h3>
-          <div class="links-group phones">
-            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201012864994" target="_blank" rel="noopener">01012864994</a>
-            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201010192901" target="_blank" rel="noopener">01010192901</a>
-            <a class="btn outline proximity" data-proximity-radius="140" href="https://wa.me/201228690021" target="_blank" rel="noopener">01228690021</a>
+      <section id="games" class="view glass hidden">
+        <h2>ألعاب سريعة</h2>
+        <div class="games-grid">
+          <div class="card"><h3>صح ولا غلط</h3><div id="tf-game"></div></div>
+          <div class="card"><h3>من هو البروتوكول؟</h3><div id="guess-game"></div></div>
+          <div class="card"><h3>مطابقة الطبقات</h3><div id="match-game"></div></div>
+        </div>
+      </section>
+
+      <section id="videos" class="view glass hidden">
+        <h2>فيديوهات قصيرة</h2>
+        <div class="video-grid">
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/9d5oZ2Ck4Yw" title="Subnetting in 60s" allowfullscreen></iframe>
+            <p>Subnetting في دقيقة</p>
+          </div>
+          <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/7L8p7_SLzvQ" title="OSI Model Quick" allowfullscreen></iframe>
+            <p>نموذج OSI بسرعة</p>
           </div>
         </div>
+      </section>
+
+      <section id="bank" class="view glass hidden">
+        <h2>بنك الأسئلة</h2>
+        <div class="bank-controls">
+          <button id="start-bank" class="cta">ابدأ مجموعة عشوائية</button>
+          <label class="upload">
+            <input type="file" id="upload-bank" accept="application/json" /> استيراد JSON (200+)
+          </label>
+        </div>
+        <div id="bank-quiz" class="quiz"></div>
+      </section>
+
+      <section id="scenarios" class="view glass hidden">
+        <h2>سيناريوهات من الواقع</h2>
+        <div id="scenarios-list" class="list"></div>
+      </section>
+
+      <section id="flashcards" class="view glass hidden">
+        <h2>بطاقات مصطلحات</h2>
+        <div id="flashcards-grid" class="flashcards"></div>
+      </section>
+
+      <section id="notes" class="view glass hidden">
+        <h2>ملاحظاتك</h2>
+        <div class="notes-controls">
+          <input id="note-title" placeholder="عنوان الملاحظة" />
+          <textarea id="note-body" placeholder="نص الملاحظة"></textarea>
+          <button id="add-note" class="cta">إضافة</button>
+        </div>
+        <div id="notes-list" class="notes-grid"></div>
+      </section>
+
+      <section id="mindmap" class="view glass hidden">
+        <h2>خريطة ذهنية: OSI</h2>
+        <div id="mindmap-svg" class="mindmap"></div>
+      </section>
+
+      <section id="exams" class="view glass hidden">
+        <h2>امتحانات</h2>
+        <div class="exams-grid">
+          <div class="card">
+            <h3>امتحان منتصف الكورس</h3>
+            <button id="start-mid" class="cta">ابدأ</button>
+            <div id="mid-exam" class="quiz"></div>
+          </div>
+          <div class="card">
+            <h3>امتحان نهائي (محاكاة Cisco)</h3>
+            <button id="start-final" class="cta">ابدأ</button>
+            <div id="final-exam" class="quiz"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="glossary" class="view glass hidden">
+        <h2>قاموس المصطلحات</h2>
+        <div class="search-row">
+          <input id="glossary-search" placeholder="ابحث عن مصطلح" />
+        </div>
+        <div id="glossary-list" class="list"></div>
+      </section>
+
+      <section id="resources" class="view glass hidden">
+        <h2>مصادر</h2>
+        <ul class="links">
+          <li><a href="https://www.netacad.com/" target="_blank" rel="noopener">Cisco NetAcad</a></li>
+          <li><a href="https://www.packettracerlab.com/" target="_blank" rel="noopener">Packet Tracer Labs</a></li>
+          <li><a href="https://www.gns3.com/" target="_blank" rel="noopener">GNS3</a></li>
+          <li><a href="https://datatracker.ietf.org/" target="_blank" rel="noopener">IETF RFCs</a></li>
+        </ul>
+        <h3>أسئلة مقابلات (شبكات + CCNA)</h3>
+        <div class="list">
+          <div class="item"><div><strong>ما الفرق بين Router و Switch؟</strong><div class="muted">التوجيه بين الشبكات مقابل التبديل داخل الشبكة، الطبقات، الجداول.</div></div></div>
+          <div class="item"><div><strong>اشرح NAT بأنواعه</strong><div class="muted">Static / Dynamic / PAT ولماذا نحتاجه على حدود الشبكات.</div></div></div>
+          <div class="item"><div><strong>كيف يعمل STP؟</strong><div class="muted">انتخاب Root Bridge، حظر الحلقات، حالات المنافذ.</div></div></div>
+          <div class="item"><div><strong>Subettting سريع</strong><div class="muted">حساب الشبكات/المضيفين من خلال الأقنعة والـ CIDR.</div></div></div>
+          <div class="item"><div><strong>OSPF vs EIGRP</strong><div class="muted">Link-State vs Advanced Distance Vector، المقاييس، التقارب.</div></div></div>
+        </div>
+      </section>
+
+      <section id="leaderboard" class="view glass hidden">
+        <h2>الترتيب والمستويات</h2>
+        <div id="leaderboard-list" class="list"></div>
+      </section>
+
+      <section id="certificate" class="view glass hidden">
+        <h2>شهادة إتمام</h2>
+        <div class="cert-controls">
+          <input id="cert-name" placeholder="اكتب اسمك" />
+          <button id="generate-cert" class="cta">توليد الشهادة PDF</button>
+        </div>
+        <canvas id="cert-preview" width="800" height="500"></canvas>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="year"></span> متجر علوش — جمال، سرعة، وثقة</p>
-      </div>
+    <footer class="app-footer glass">
+      <span>منصة تعليمية للاستخدام الشخصي — هذه المنصة لا تحتوي على محتوى محمي بحقوق نشر. يمكنك إضافة محتوى الدروس الخاص بك.</span>
     </footer>
 
-    <script defer src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="./assets/app.js"></script>
   </body>
   </html>
 
